@@ -1,9 +1,20 @@
 package com.zdy.hibernate;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="employee")
 public class Employee {
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Column(name = "fistname")
     private String firstName;
+    @Column(name = "salary")
     private double salary;
+    @JoinColumn(name = "department")
+    @ManyToOne
     private Department department;
     //默认构造方法
     public Employee() {

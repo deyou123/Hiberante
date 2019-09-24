@@ -14,9 +14,13 @@
         <!-- 数据库方言 -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
-        <!--自动生成的实体和hbm.xml 文件位置。-->
-        <mapping resource="Employee.hbm.xml" />
-        <mapping resource="Department.hbm.xml" />
+        <!--hbm.xml 文件位置。-->
+        <!--<mapping resource="Employee.hbm.xml" />
+        <mapping resource="Department.hbm.xml" />-->
+        <!--添加注解配置位置-->
+        <mapping class="com.zdy.hibernate.Employee"></mapping>
+        <mapping class="com.zdy.hibernate.Department"></mapping>
+
 
 
         <!-- <property name="connection.username"/> -->
