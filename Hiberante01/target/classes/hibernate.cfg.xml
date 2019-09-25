@@ -6,20 +6,20 @@
     <session-factory>
         <!--配置数据库-->
         <property name="connection.url">jdbc:mysql://47.105.182.170:3306/kode12</property>
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="connection.username">root</property>
         <property name="connection.password">666666</property>
         <!--自动生虫数据库表-->
         <property name="hbm2ddl.auto">update</property>
         <!-- 数据库方言 -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
-
+        <property name="show_sql" >true</property>
         <!--hbm.xml 文件位置。-->
         <!--<mapping resource="Employee.hbm.xml" />
         <mapping resource="Department.hbm.xml" />-->
         <!--添加注解配置位置-->
-        <mapping class="com.zdy.hibernate.Employee"></mapping>
-        <mapping class="com.zdy.hibernate.Department"></mapping>
+        <mapping class="com.zdy.hibernate.entity.Employee"></mapping>
+        <mapping class="com.zdy.hibernate.entity.Department"></mapping>
 
 
 

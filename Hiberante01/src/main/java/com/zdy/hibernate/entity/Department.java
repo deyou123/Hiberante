@@ -1,4 +1,4 @@
-package com.zdy.hibernate;
+package com.zdy.hibernate.entity;
 
 import javax.persistence.*;
 
@@ -8,7 +8,7 @@ public class Department {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column
@@ -31,5 +31,13 @@ public class Department {
 
     public void setDeptName(String deptName) {
         this.deptName = deptName;
+    }
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "id=" + id +
+                ", deptName='" + deptName + '\'' +
+                '}';
     }
 }

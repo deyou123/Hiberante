@@ -3,9 +3,9 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="com.zdy.hibernate.Department"  table="department">
+    <class name="com.zdy.hibernate.entity.Department" table="department">
        <id name="id" type="java.lang.Long" column="id">
-           <generator class="increment"></generator>
+           <generator class="identity"></generator>
        </id>
         <property name="deptName" column="deptName"></property>
 

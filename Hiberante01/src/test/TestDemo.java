@@ -1,4 +1,4 @@
-import com.zdy.hibernate.Employee;
+import com.zdy.hibernate.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

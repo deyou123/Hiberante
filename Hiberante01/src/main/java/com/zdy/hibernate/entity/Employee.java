@@ -1,4 +1,6 @@
-package com.zdy.hibernate;
+package com.zdy.hibernate.entity;
+
+import com.zdy.hibernate.entity.Department;
 
 import javax.persistence.*;
 
@@ -7,7 +9,7 @@ import javax.persistence.*;
 public class Employee {
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column(name = "fistname")
     private String firstName;
@@ -50,5 +52,15 @@ public class Employee {
 
     public void setDepartment(Department department) {
         this.department = department;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "\n id=" + id +
+                ",\n firstName='" + firstName + '\'' +
+                ", \nsalary=" + salary +
+                ", \ndepartment=" + department +
+                '}';
     }
 }
